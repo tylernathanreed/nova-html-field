@@ -1,0 +1,32 @@
+{
+    "name": "reedware/nova-html-field",
+    "description": "Adds a Laravel Nova html field for displaying html within forms.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "html",
+        "view",
+        "field"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reedware\\NovaHtmlField\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Reedware\\NovaHtmlField\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
