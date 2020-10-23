@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\NovaSelectToggleField;
+namespace Reedware\NovaHtmlField;
 
 use Laravel\Nova\Fields\Field;
 use Illuminate\Contracts\Support\Htmlable;
