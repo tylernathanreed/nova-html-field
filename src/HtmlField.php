@@ -24,7 +24,7 @@ class HtmlField extends Field
     /**
      * Create a new field.
      *
-     * @param  string  $value
+     * @param  mixed  $value
      *
      * @return void
      */
@@ -50,11 +50,11 @@ class HtmlField extends Field
     {
         $attribute = $attribute ?? $this->attribute;
 
-        if($attribute === 'HtmlComputedField') {
-            $this->value = call_user_func($this->htmlCallback, $resource);
+        if($attribute !== 'HtmlComputedField') {
+            return parent::resolve($resource, $attribute);
         }
 
-        return parent::resolve($resource, $attribute);
+        $this->value = call_user_func($this->htmlCallback, $resource);
     }
 
     /**
